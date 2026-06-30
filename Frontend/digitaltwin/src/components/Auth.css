@@ -1,0 +1,167 @@
+/* Base Container Setup */
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f1f5f9; /* Soft light grey background */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 20px;
+}
+
+/* Two-Column Split Workspace Card */
+.auth-card {
+    display: flex;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.06);
+    width: 100%;
+    max-width: 850px; /* Expanded for side-by-side presentation */
+    min-height: 520px;
+    overflow: hidden;
+}
+
+/* Left Panel: Amrita Branding Area */
+.auth-sidebar {
+    flex: 1;
+    background: #7a1b30; /* Official Amrita Deep Crimson color */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    color: #ffffff;
+    text-align: center;
+}
+
+.sidebar-logo {
+    width: 100%;          /* Make it scale dynamically inside the sidebar container */
+    max-width: 240px;     /* Increased from 150px to fit the text cleanly */
+    height: auto;
+    margin-bottom: 15px;
+    background: #ffffff;  
+    padding: 5px;        
+    border-radius: 8px;   /* Changed from 50% to a rounded rectangle shape */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    object-fit: contain;  /* Safeguards image proportions from squeezing */
+}
+
+.auth-sidebar h1 {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+.auth-sidebar h2 {
+    margin: 8px 0 0 0;
+    font-size: 0.95rem;
+    color: #f3e8ff;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+}
+
+/* Right Panel: Clean White Form Area */
+.auth-main-form {
+    flex: 1.2;
+    padding: 50px 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #ffffff;
+}
+
+.auth-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+    color: #1e293b;
+}
+
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+}
+
+.form-group input {
+    padding: 12px 14px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    background: #f8fafc;
+    color: #334155;
+    font-size: 0.95rem;
+    transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #7a1b30; /* Highlight color matches the sidebar */
+    background: #ffffff;
+    box-shadow: 0 0 0 3px rgba(122, 27, 48, 0.1);
+}
+
+/* Professional Form Button */
+.auth-btn {
+    background: #7a1b30;
+    color: #ffffff;
+    padding: 13px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(122, 27, 48, 0.15);
+}
+
+.auth-btn:hover {
+    background: #5f1324;
+}
+
+/* Toggle Link Styling */
+.auth-toggle-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.auth-toggle-link {
+    color: #7a1b30;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.auth-toggle-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive optimization for mobile displays */
+@media (max-width: 768px) {
+    .auth-card {
+        flex-direction: column;
+        max-width: 450px;
+    }
+    .auth-sidebar {
+        padding: 30px;
+    }
+    .auth-main-form {
+        padding: 35px 30px;
+    }
+}
